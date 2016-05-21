@@ -1,0 +1,141 @@
+% NiceCleanResume v. 1.0
+% This is a simple resume template I made for myself
+% (c) 2016 Christopher Gibilisco
+
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2005/12/01 or later.
+%
+% This work has the LPPL maintenance status `maintained'.
+% 
+% The Current Maintainer of this work is Christopher Gibilisco
+%
+% This work consists of the files cleanresume.tex
+
+
+%Declares the class and sets the font at 11pt, and the paper size to letter
+\documentclass[11pt, letterpaper]{article}
+%sets font to Libertine
+\usepackage[T1]{fontenc}
+\usepackage{libertine}
+\renewcommand{\familydefault}{\sfdefault}
+%section formatting
+\usepackage{titlesec}
+ \titleformat{\section}
+ {\normalfont\Large\filcenter}{\thesection}{1em}{}
+\titlespacing*{\section}
+{0pt}{.15in}{.15in}
+%sets margins
+\usepackage[hmargin=1in,vmargin=1in]{geometry}
+%keeps LaTeX from indenting new paragraphs
+\setlength{\parindent}{0in}
+%list stuff
+\usepackage{mdwlist}
+\usepackage{enumitem}
+%hyperlinks/color
+\usepackage{color}
+\definecolor{darkblue}{rgb}{0.0,0.0,.5}
+\usepackage{hyperref}
+  \hypersetup{colorlinks,breaklinks,
+              linkcolor=darkblue,urlcolor=darkblue,
+              anchorcolor=darkblue,citecolor=darkblue}
+\begin{document}
+
+%gets rid of automatic page numbering (might want to remove on resumes
+%that are longer than 1 page)
+\pagenumbering{gobble}
+
+\begin{center}
+%put your name here
+{\LARGE Jane/John Doe}
+\end{center}
+
+%creates the nice horizontal line between your name and your contact info
+\hrule
+
+\vspace{.1in}
+
+%contact info (\hfill moves everything to the right of it snugly against the right margin)
+742 Evergreen Terrace \hfill \href{https://www.linkedin.com/in/yourvanityurl}{https://www.linkedin.com/in/myvanityurl} \\
+Springfield, WZ 12345   \hfill \href{mailto:myemail@wherever.com}{myemail@wherever.com}\\
+(939) 555 1283
+
+%Here you list your past job experience
+\section*{Professional Experience}
+
+%Employer
+\textbf{Abe's Widgets}, City, State \hfill (8/2010--present)\\
+%Job Title
+\textbf{Widget Engineer}
+
+%Short description of duties (I know about the lipsum package, I just don't want
+%it in the template)
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris scelerisque et ligula ac rutrum. Phasellus ipsum nisi, aliquam id erat. 
+
+\vspace{-.1in}
+
+\begin{itemize*}
+%List accomplishments
+\item Accomplishment 1
+\item Accomplishment 2
+\end{itemize*}
+
+\vspace{-.1in}
+
+%Employer
+\textbf{Monty's Widgets}, City, State \hfill (5/1995--8/2010)\\
+%Job Title
+\textbf{Widget Engineer}
+
+%Short description of duties
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris scelerisque et ligula ac rutrum. Phasellus ipsum nisi, aliquam id erat. 
+
+\vspace{-.1in}
+
+\begin{itemize*}
+%List accomplishments
+\item Accomplishment 1
+\item Accomplishment 2
+\end{itemize*}
+
+\vspace{-.1in}
+
+%Employer
+\textbf{Moe's Widgets}, City, State \hfill (5/1976--5/1995)\\
+%Job Title
+\textbf{Widget Engineer}
+
+%Short description of duties
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris scelerisque et ligula ac rutrum. Phasellus ipsum nisi, aliquam id erat. 
+
+\vspace{-.1in}
+\begin{itemize*}
+%List accomplishments
+\item Accomplishment 1
+\item Accomplishment 2
+\end{itemize*}
+
+%%%Copy and paste as many times as necessary to complete your employment history. Don't miss
+%%%the \vspace{-1pc} which sets the space between the entries
+
+\section*{Education}
+
+%Your education goes here. List your degrees and their respective majors, universities, and graduation dates
+\textbf{BS}, \textbf{Electrical Engineering}, University of Hoople, 1976
+\vspace{-.1in}
+%List your accomplishments
+\begin{itemize*}
+\item GPA: 4.0
+\item Accomplishment 2
+\item Accomplishment 3
+\end{itemize*}
+
+\section*{Skills}
+%List your marketable skills here
+\textbf{Skills Type 1}: Lorem ipsum dolor sit amet\\
+\textbf{Skills Type 2}: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+\end{document}
